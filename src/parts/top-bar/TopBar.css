@@ -1,0 +1,17 @@
+.top-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    color: white;
+  }
+  
+  .top-bar__cart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+  .top-bar__cart-icon {
+    margin-right: 4px;
+  }
