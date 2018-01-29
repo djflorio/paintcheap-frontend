@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/fontawesome-free-solid';
 import './Home.css';
 
 class Home extends Component {
@@ -17,6 +19,28 @@ class Home extends Component {
             FIND A PAINTING
           </a>
         </div>
+        <ul className="home__quotes">
+          {
+            this.props.reviews.map((review) => {
+              return (
+              <li key={review.id} className="home__quotes-item">
+                <p className="home__quotes-text">
+                  <i>{review.text}</i>
+                  <br/>
+                  {review.name}
+                </p>
+                <span className="home__quotes-rating">
+                  <FontAwesomeIcon icon={faStar} />
+                  <FontAwesomeIcon icon={faStar} />
+                  <FontAwesomeIcon icon={faStar} />
+                  <FontAwesomeIcon icon={faStar} />
+                  <FontAwesomeIcon icon={faStar} />
+                </span>
+              </li>
+              );
+            })
+          }
+        </ul>
       </section>
     );
   }

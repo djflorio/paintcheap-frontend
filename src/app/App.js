@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TopBar from '../parts/top-bar/TopBar';
 import Home from '../pages/Home';
+import reviews from '../dummyData/reviews';
 import './App.css';
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <TopBar />
-        <Home />
+        <Home reviews={reviews}/>
       </div>
     );
   }
