@@ -1,0 +1,20 @@
+/* Top Bar */
+.top-bar {
+  position: fixed;
+  height: 40px;
+  width: 100%;
+  z-index: 10;
+}
+
+.top-bar__cart {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* Hero */
+.hero {
+  background-image: url('../assets/img/paintbackground.jpeg');
+  height: 500px;
+  background-size: cover;
+}
