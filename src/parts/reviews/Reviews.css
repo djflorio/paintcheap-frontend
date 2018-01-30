@@ -1,0 +1,9 @@
+.reviews {
+  margin-top: 60px;
+  text-align: center;
+  color: white;
+}
+
+.review__name {
+  font-size: 12px;
+}
