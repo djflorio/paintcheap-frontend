@@ -1,5 +1,5 @@
 import React from 'react';
-import Reviews from '../parts/reviews/Reviews';
+import ReviewsContainer from '../parts/reviews/ReviewsContainer';
 import './Home.css';
 
 const Home = (props) => {
@@ -16,7 +16,7 @@ const Home = (props) => {
           FIND A PAINTING
         </a>
       </div>
-      <Reviews reviews={props.reviews}/>
+      <ReviewsContainer />
     </section>
   );
 }
