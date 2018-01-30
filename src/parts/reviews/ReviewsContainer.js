@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Reviews from './Reviews';
-import reviewsDummy from '../../dummyData/reviews';
+
+import { fetchReviews } from "./ReviewsActions";
 
 class ReviewsContainer extends Component {
+  componentWillMount() {
+    this.props.dispatch(fetchReviews());
+  }
   render() {
+    console.log("PROPS:");
+    console.log(this.props);
     return (
-      <Reviews reviews={reviewsDummy} />
+      <Reviews reviews={this.props.reviews} />
     );
   }
 }
 
-export default ReviewsContainer;
+function mapStateToProps(store) {
+  return {
+    reviews: store.reviews.reviews
+  }
+}
+
+export default connect(mapStateToProps)(ReviewsContainer);
