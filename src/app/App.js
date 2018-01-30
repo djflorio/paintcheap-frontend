@@ -8,6 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="App__overlay"></div>
         <TopBar />
         <Home reviews={reviews}/>
       </div>
