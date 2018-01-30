@@ -1,45 +1,58 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 .hero {
-    background-image: url('../assets/img/paintbackground.jpeg');
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-  }
-  
-  .hero__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    opacity: 0.2;
-    z-index: -1
-  }
-  
-  .hero__intro {
-    text-align: center;
-    margin-top: 20%;
-    color: white;
-  }
-  
-  .hero__title {
-    font-family: 'Merienda', cursive;
-    font-size: 74px;
-    line-height: 74px;
-    padding: 0;
-    margin: 10px 0 0 10px;
-  }
-  
-  .hero__text {
-    font-size: 17px;
-    padding-top: 15px;
-    padding-bottom: 20px;
-  }
-  
-  .hero__button {
-    border: solid white 2px;
-    padding: 15px 25px;
-  }
+  background-image: url('../assets/img/paintbackground.jpeg');
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.3;
+  z-index: -1
+}
+
+.hero__intro {
+  text-align: center;
+  margin-top: 20%;
+  color: white;
+}
+
+.hero__title {
+  font-family: 'Merienda', cursive;
+  font-size: 74px;
+  line-height: 74px;
+  padding: 0;
+  margin: 10px 0 0 10px;
+}
+
+.hero__text {
+  font-size: 17px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.hero__button {
+  border: solid white 2px;
+  padding: 15px 25px;
+}
+
+.home__quotes {
+  margin-top: 60px;
+  text-align: center;
+  color: white;
+}
+
+.home__quotes-name {
+  font-size: 12px;
+}

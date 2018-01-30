@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/fontawesome-free-solid';
+import { faStarHalf } from '@fortawesome/fontawesome-free-solid';
+import Slider from 'react-slick';
 import './Home.css';
 
 class Home extends Component {
+
   render() {
     return (
       <section className="hero">
@@ -19,28 +22,29 @@ class Home extends Component {
             FIND A PAINTING
           </a>
         </div>
-        <ul className="home__quotes">
+        <Slider autoplay={true} autoplaySpeed={5000} className="home__quotes">
           {
-            this.props.reviews.map((review) => {
-              return (
-              <li key={review.id} className="home__quotes-item">
+            this.props.reviews.map(review => 
+              <div key={review.id} className="home__quotes-item">
+                <span className="home__quotes-rating">
+                {
+                  review.rating.map((rating, i) => {
+                    if (rating === 0.5) {
+                      return <FontAwesomeIcon key={i} icon={faStarHalf} />
+                    }
+                    return <FontAwesomeIcon key={i} icon={faStar} />
+                  })
+                }
+                </span>
                 <p className="home__quotes-text">
                   <i>{review.text}</i>
                   <br/>
-                  {review.name}
+                  <span className="home__quotes-name">- {review.name}</span>
                 </p>
-                <span className="home__quotes-rating">
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                </span>
-              </li>
-              );
-            })
+              </div>
+            )
           }
-        </ul>
+        </Slider>
       </section>
     );
   }
