@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans|Merienda');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans');
+@font-face {
+  font-family: 'Merienda';
+  src: local('Merienda'), url('../assets/fonts/Merienda-Regular.ttf') format('truetype')
+}
 
 body {
   margin: 0;
