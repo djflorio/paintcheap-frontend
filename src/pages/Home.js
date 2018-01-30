@@ -37,7 +37,7 @@ class Home extends Component {
                 }
                 </span>
                 <p className="home__quotes-text">
-                  <i>{review.text}</i>
+                  <i>"{review.text}"</i>
                   <br/>
                   <span className="home__quotes-name">- {review.name}</span>
                 </p>
