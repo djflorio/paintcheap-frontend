@@ -1,0 +1,12 @@
+.paintings {
+    position: relative;
+    background-color: rgba(255,255,255,0.8);
+    padding: 40px;
+}
+
+.paintings__list {
+    list-style: none;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+}

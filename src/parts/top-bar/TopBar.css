@@ -1,13 +1,16 @@
 .top-bar {
     position: fixed;
-    width: 100%;
     z-index: 10;
     color: white;
+    top: 0;
+    right: 40px;
+    left: 40px;
+    height: 40px;
   }
   
   .top-bar__cart {
     position: absolute;
-    right: 10px;
+    right: 0;
     top: 10px;
     font-family: 'Noto Sans', sans-serif;
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewsContainer from '../parts/reviews/ReviewsContainer';
+import { NavLink } from 'react-router-dom';
 import './Home.css';
 
 const Home = (props) => {
@@ -12,9 +13,9 @@ const Home = (props) => {
         <p className="home__text">
           We put art in the hands of those who need it most.
         </p>
-        <a className="home__button">
+        <NavLink className="home__button" to='/paintings'>
           FIND A PAINTING
-        </a>
+        </NavLink>
       </div>
       <ReviewsContainer />
     </section>

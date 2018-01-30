@@ -40,6 +40,8 @@
   -o-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+  color: white;
+  text-decoration: none;
 }
 
 .home__button:hover {
