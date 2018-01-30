@@ -11,6 +11,7 @@ class Home extends Component {
     return (
       <section className="hero">
         <div className="hero__overlay"></div>
+        <div className="home__center">
         <div className='hero__intro'>
           <h1 className="hero__title">
             paintcheap
@@ -22,7 +23,7 @@ class Home extends Component {
             FIND A PAINTING
           </a>
         </div>
-        <Slider autoplay={true} autoplaySpeed={5000} className="home__quotes">
+        <Slider autoplay={true} autoplaySpeed={5000} arrows={false} className="home__quotes">
           {
             this.props.reviews.map(review => 
               <div key={review.id} className="home__quotes-item">
@@ -45,6 +46,7 @@ class Home extends Component {
             )
           }
         </Slider>
+        </div>
       </section>
     );
   }

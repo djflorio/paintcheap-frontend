@@ -22,9 +22,19 @@
   z-index: -1
 }
 
+.home__center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 700px;
+  height: 400px;
+}
+
 .hero__intro {
   text-align: center;
-  margin-top: 20%;
   color: white;
 }
 
