@@ -11,7 +11,7 @@ const Home = (props) => {
           PaintCheap
         </h1>
         <p className="home__text">
-          We put art in the hands of those who need it most.
+          Original masterpieces at reasonable prices.
         </p>
         <NavLink className="home__button" to='/paintings'>
           FIND A PAINTING
