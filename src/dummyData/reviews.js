@@ -9,7 +9,7 @@ const reviews = [
     {
         id: 2,
         name: "Mike Anvas",
-        text: "Why couldn't this have existed when I took art in high school?",
+        text: "Finally, real artwork at prices we can afford.",
         rating: [1,1,1,1],
         visible: true
     },
@@ -22,7 +22,7 @@ const reviews = [
     },
     {
         id: 4,
-        name: "Iam Broke",
+        name: "Lotsa Cash",
         text: "Great service, though my Sistine Chapel had a few cracks in it.",
         rating: [1,1,1],
         visible: true
@@ -30,7 +30,7 @@ const reviews = [
     {
         id:5,
         name: "Michelangelo",
-        text: "You're selling my work for $5???",
+        text: "They named a ninja turtle after me?",
         rating: [1],
         visible: true
     },
