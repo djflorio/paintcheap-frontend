@@ -14,7 +14,7 @@ const paintings = [
         name: "Mona Lisa",
         artist: "Leonardo da Vinci",
         retail_price: 612000000,
-        price: 59.99,
+        price: 600999999,
         image: monalisa
     },
     {
@@ -22,7 +22,7 @@ const paintings = [
         name: "The Persistence of Memory",
         artist: "Salvador Dalí",
         retail_price: 300000000,
-        price: 24.99,
+        price: 299999999,
         image: persistenceofmemory
     },
     {
@@ -30,7 +30,7 @@ const paintings = [
         name: "The Starry Night",
         artist: "Vincent van Gogh",
         retail_price: 120000000,
-        price: 45.99,
+        price: 119999999,
         image: thestarrynight
     },
     {
@@ -38,7 +38,7 @@ const paintings = [
         name: "The Scream",
         artist: "Edvard Munch",
         retail_price: 230000000,
-        price: 22.99,
+        price: 200999999,
         image: thescream
     },
     {
@@ -46,7 +46,7 @@ const paintings = [
         name: "Girl with a Pearl Earring",
         artist: "Johannes Vermeer",
         retail_price: 160000000,
-        price: 75.99,
+        price: 150000000,
         image: girlwithapearlearring
     },
     {
@@ -54,7 +54,7 @@ const paintings = [
         name: "Self-Portrait with Thorn Necklace and Hummingbird",
         artist: "Frida Kahlo",
         retail_price: 200000000,
-        price: 45.99,
+        price: 190000000,
         image: thornnecklace
     },
     {
@@ -62,7 +62,7 @@ const paintings = [
         name: "The Birth of Venus",
         artist: "Sandro Botticelli",
         retail_price: 110000000,
-        price: 15.99,
+        price: 109999999,
         image: birthofvenus
     },
     {
@@ -70,7 +70,7 @@ const paintings = [
         name: "A Friend in Need",
         artist: "Cassius Marcellus Coolidge",
         retail_price: 700000,
-        price: 18.99,
+        price: 699999,
         image: afriendinneed
     },
     {
@@ -78,7 +78,7 @@ const paintings = [
         name: "Convergence",
         artist: "Jackson Pollock",
         retail_price: 140000000,
-        price: 49.99,
+        price: 130000000,
         image: convergence
     }
 ]

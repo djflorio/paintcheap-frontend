@@ -1,0 +1,86 @@
+.painting-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.painting {
+    display: inline-block;
+    width: 100%;
+}
+
+.painting__image {
+    position: relative;
+    background-size: cover;
+    display: block;
+    background-position: top;
+}
+
+.painting__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 5;
+    padding: 5px;
+}
+
+.painting__overlay:hover {
+    opacity: 1;
+}
+
+.painting__name {
+    margin: 0;
+}
+
+.painting__item-square {
+    width: 100%;
+    display: block;
+    opacity: 0;
+}
+
+.painting__info {
+    position: relative;
+    display: block;
+}
+
+.painting__retail {
+    display: inline-block;
+    text-decoration: line-through;
+    color: #777;
+}
+
+.painting__price {
+    display: inline-block;
+    color: #9b3434;
+    font-size: 20px;
+}
+
+.painting__add {
+    display: inline-block;
+    padding: 3px 8px;
+    border: solid #9b3434 1px;
+    color: #9b3434;
+    border-radius: 5px;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+.painting__add-icon {
+    margin-right: 5px;
+}
