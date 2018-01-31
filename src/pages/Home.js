@@ -8,7 +8,7 @@ const Home = (props) => {
     <section className="home">
       <div className="home__intro">
         <h1 className="home__title">
-          paintcheap
+          PaintCheap
         </h1>
         <p className="home__text">
           We put art in the hands of those who need it most.
