@@ -1,7 +1,6 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/fontawesome-free-solid';
-import paintings from '../../dummyData/paintings';
 import numbro from 'numbro';
 import './PaintingGrid.css';
 
@@ -9,7 +8,7 @@ const PaintingGrid = (props) => {
     return (
         <ul className="painting-grid">
         {
-        paintings.map((painting) => {
+        props.paintings.map((painting) => {
             return (
                 <li className="painting" key={painting.id}>
                     <div className="painting__image" style={{ backgroundImage: `url(${painting.image})`}}>

@@ -9,8 +9,6 @@ class ReviewsContainer extends Component {
     this.props.dispatch(fetchReviews());
   }
   render() {
-    console.log("PROPS:");
-    console.log(this.props);
     return (
       <Reviews reviews={this.props.reviews} />
     );

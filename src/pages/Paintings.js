@@ -1,11 +1,11 @@
 import React from 'react';
-import PaintingGrid from '../parts/painting-grid/PaintingGrid';
+import PaintingGridContainer from '../parts/painting-grid/PaintingGridContainer';
 import './Paintings.css';
 
 const Paintings = (props) => {
   return (
     <section className="paintings">
-        <PaintingGrid />
+        <PaintingGridContainer />
     </section>
   );
 }
