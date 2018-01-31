@@ -5,6 +5,8 @@ import thescream from "../assets/img/paintings/thescream.jpg";
 import girlwithapearlearring from "../assets/img/paintings/girlwithapearlearring.jpg";
 import thornnecklace from "../assets/img/paintings/thornnecklace.jpg";
 import birthofvenus from "../assets/img/paintings/birthofvenus.jpg";
+import afriendinneed from "../assets/img/paintings/afriendinneed.jpg";
+import convergence from "../assets/img/paintings/convergence.jpg";
 
 const paintings = [
     {
@@ -62,6 +64,22 @@ const paintings = [
         retail_price: 110000000,
         price: 15.99,
         image: birthofvenus
+    },
+    {
+        id: 8,
+        name: "A Friend in Need",
+        artist: "Cassius Marcellus Coolidge",
+        retail_price: 700000,
+        price: 18.99,
+        image: afriendinneed
+    },
+    {
+        id: 9,
+        name: "Convergence",
+        artist: "Jackson Pollock",
+        retail_price: 140000000,
+        price: 49.99,
+        image: convergence
     }
 ]
 
