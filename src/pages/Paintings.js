@@ -14,6 +14,9 @@ const Paintings = (props) => {
             return (
                 <li className="painting" key={painting.id}>
                     <div className="painting__image" style={{ backgroundImage: `url(${painting.image})`}}>
+                        <div className="painting__overlay">
+                            <p className="painting__name">{painting.name}</p>
+                        </div>
                         <img className="painting__item-square" src={require("../assets/img/1x1.png")}/>
                     </div>
                     <div className="painting__info">
