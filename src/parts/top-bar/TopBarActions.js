@@ -1,12 +1,10 @@
-export const SET_OPACITY_FALSE = "SET_OPACITY_FALSE";
-export const SET_OPACITY_TRUE = "SET_OPACITY_TRUE";
+export const SHOW_TOPBAR_BACKGROUND = "SHOW_TOPBAR_BACKGROUND";
+export const HIDE_TOPBAR_BACKGROUND = "HIDE_TOPBAR_BACKGROUND";
 
-export const setOpacityFalse = () => ({
-    type: SET_OPACITY_FALSE,
-    payload: false
+export const showBackground = () => ({
+    type: SHOW_TOPBAR_BACKGROUND
 });
 
-export const setOpacityTrue = () => ({
-    type: SET_OPACITY_TRUE,
-    payload: true
+export const hideBackground = () => ({
+    type: HIDE_TOPBAR_BACKGROUND
 });
