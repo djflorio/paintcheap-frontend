@@ -14,6 +14,7 @@ const PaintingGrid = (props) => {
                     <div className="painting__image" style={{ backgroundImage: `url(${painting.image})`}}>
                         <div className="painting__overlay">
                             <p className="painting__name">{painting.name}</p>
+                            <p className="painting__artist">{painting.artist}</p>
                         </div>
                         <img className="painting__item-square" src={require("../../assets/img/1x1.png")}/>
                     </div>
