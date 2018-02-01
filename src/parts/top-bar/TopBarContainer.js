@@ -17,9 +17,9 @@ class TopBarContainer extends Component {
   handleScroll(event) {
     const visible = this.props.backgroundVisible;
     if (document.querySelector(".App").scrollTop > 7 && !visible) {
-      this.props.showBackground();
+      this.props.dispatch(showBackground());
     } else if (document.querySelector(".App").scrollTop <= 7 && visible){
-      this.props.hideBackground();
+      this.props.dispatch(hideBackground());
     }
   }
   render() {
@@ -35,7 +35,7 @@ function mapStateToProps(store) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
+/*function mapDispatchToProps(dispatch) {
   return {
     showBackground: () => {
       dispatch(showBackground())
@@ -44,8 +44,8 @@ function mapDispatchToProps(dispatch) {
       dispatch(hideBackground())
     }
   }
-}
+}*/
 
 export default connect(
-  mapStateToProps, mapDispatchToProps
+  mapStateToProps
 )(TopBarContainer);
