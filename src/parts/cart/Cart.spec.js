@@ -38,6 +38,20 @@ describe('Cart', () => {
     expect(reducer(undefined, actions.addToCart(painting))).toEqual(result);
   });
 
+  it('should not add duplite item to cart with addToCart', () => {
+    const painting = {
+      id: 1,
+      name: "painting",
+      price: 50
+    }
+    const result = {
+      cart: [
+        painting
+      ]
+    }
+    expect(reducer({cart: [painting]}, actions.addToCart(painting))).toEqual(result);
+  });
+
   it('should return default state for unrecognized action', () => {
     expect(reducer(undefined, { type: 'unexpected' })).toEqual({
       cart: []
