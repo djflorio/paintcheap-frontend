@@ -24,14 +24,18 @@ class TopBarContainer extends Component {
   }
   render() {
     return (
-      <TopBar backgroundVisible={this.props.backgroundVisible} />
+      <TopBar
+        backgroundVisible={this.props.backgroundVisible}
+        cartTotal={this.props.cartTotal}
+      />
     );
   }
 }
 
 function mapStateToProps(store) {
   return {
-    backgroundVisible: store.topBar.backgroundVisible
+    backgroundVisible: store.topBar.backgroundVisible,
+    cartTotal: store.cart.cart.length
   }
 }
 

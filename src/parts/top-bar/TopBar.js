@@ -10,7 +10,7 @@ const TopBar = (props) => {
       <NavLink className="top-bar__home" to='/'>PaintCheap</NavLink>
       <a className="top-bar__cart">
         <FontAwesomeIcon className="top-bar__cart-icon" icon={faShoppingCart} />
-        CART (0)
+        CART ({props.cartTotal})
       </a>
     </div>
   );
