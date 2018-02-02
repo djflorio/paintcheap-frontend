@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PaintingGrid from './PaintingGrid';
-import {
-  fetchPaintings,
-  addToCart,
-  removeFromCart
-} from './PaintingGridActions';
+import { fetchPaintings } from './PaintingGridActions';
+import {addToCart, removeFromCart } from '../cart/CartActions';
 
 class PaintingGridContainer extends Component {
   componentWillMount() {

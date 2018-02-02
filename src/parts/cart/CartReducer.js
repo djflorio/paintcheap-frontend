@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from '../painting-grid/PaintingGridActions';
+import { ADD_TO_CART, REMOVE_FROM_CART } from './CartActions';
 
 const cart = (state={cart: []}, action) => {
   switch(action.type) {
