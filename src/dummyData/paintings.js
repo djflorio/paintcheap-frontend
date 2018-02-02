@@ -15,7 +15,8 @@ const paintings = [
         artist: "Leonardo da Vinci",
         retail_price: 612000000,
         price: 600999999,
-        image: monalisa
+        image: monalisa,
+        inCart: false
     },
     {
         id: 2,
@@ -23,7 +24,8 @@ const paintings = [
         artist: "Salvador Dalí",
         retail_price: 300000000,
         price: 299999999,
-        image: persistenceofmemory
+        image: persistenceofmemory,
+        inCart: false
     },
     {
         id: 3,
@@ -31,7 +33,8 @@ const paintings = [
         artist: "Vincent van Gogh",
         retail_price: 120000000,
         price: 119999999,
-        image: thestarrynight
+        image: thestarrynight,
+        inCart: false
     },
     {
         id: 4,
@@ -39,7 +42,8 @@ const paintings = [
         artist: "Edvard Munch",
         retail_price: 230000000,
         price: 200999999,
-        image: thescream
+        image: thescream,
+        inCart: false
     },
     {
         id: 5,
@@ -47,7 +51,8 @@ const paintings = [
         artist: "Johannes Vermeer",
         retail_price: 160000000,
         price: 150000000,
-        image: girlwithapearlearring
+        image: girlwithapearlearring,
+        inCart: false
     },
     {
         id: 6,
@@ -55,7 +60,8 @@ const paintings = [
         artist: "Frida Kahlo",
         retail_price: 200000000,
         price: 190000000,
-        image: thornnecklace
+        image: thornnecklace,
+        inCart: false
     },
     {
         id: 7,
@@ -63,7 +69,8 @@ const paintings = [
         artist: "Sandro Botticelli",
         retail_price: 110000000,
         price: 109999999,
-        image: birthofvenus
+        image: birthofvenus,
+        inCart: false
     },
     {
         id: 8,
@@ -71,7 +78,8 @@ const paintings = [
         artist: "Cassius Marcellus Coolidge",
         retail_price: 700000,
         price: 699999,
-        image: afriendinneed
+        image: afriendinneed,
+        inCart: false
     },
     {
         id: 9,
@@ -79,7 +87,8 @@ const paintings = [
         artist: "Jackson Pollock",
         retail_price: 140000000,
         price: 130000000,
-        image: convergence
+        image: convergence,
+        inCart: false
     }
 ]
 
