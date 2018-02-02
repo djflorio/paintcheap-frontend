@@ -31,8 +31,8 @@ function mapDispatchToProps(dispatch) {
     onMount: () => {
       dispatch(fetchPaintings());
     },
-    onAddClick: id => {
-      dispatch(addToCart(id));
+    onAddClick: painting => {
+      dispatch(addToCart(painting));
     }
   }
 }

@@ -10,9 +10,9 @@ export const fetchPaintings = () => ({
   payload: dummyPaintings
 });
 
-export const addToCart = (paintingId) => ({
+export const addToCart = (painting) => ({
   type: ADD_TO_CART,
-  paintingId: paintingId
+  painting: painting
 });
 
 export const removeFromCart = (paintingId) => ({

@@ -22,7 +22,7 @@ const PaintingGrid = ({paintings, onAddClick}) => {
           <div className="painting__info">
             <span className="painting__retail">${numbro(painting.retail_price).format('0,0')}</span><br/>
             <span className="painting__price">${numbro(painting.price).format('0,0')}</span>
-            <a className="painting__add" onClick={() => onAddClick(painting.id)}>
+            <a className="painting__add" onClick={() => onAddClick(painting)}>
               <FontAwesomeIcon className="painting__add-icon" icon={faShoppingCart} />
               Add to cart
             </a>
