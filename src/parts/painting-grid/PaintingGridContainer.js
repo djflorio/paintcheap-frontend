@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PaintingGrid from './PaintingGrid';
 import { fetchPaintings } from './PaintingGridActions';
-import {addToCart, removeFromCart } from '../cart/CartActions';
+import { addToOrRemoveFromCart } from '../cart/CartActions';
 
 class PaintingGridContainer extends Component {
   componentWillMount() {
@@ -29,7 +29,7 @@ function mapDispatchToProps(dispatch) {
       dispatch(fetchPaintings());
     },
     onAddClick: painting => {
-      dispatch(addToCart(painting));
+      dispatch(addToOrRemoveFromCart(painting));
     }
   }
 }
