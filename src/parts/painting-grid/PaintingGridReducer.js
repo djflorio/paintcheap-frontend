@@ -10,7 +10,7 @@ const paintingGrid = (state={paintings: []}, action) => {
         }
         case ADD_TO_OR_REMOVE_FROM_CART: {
             for (let i=0; i < state.paintings.length; i++) {
-                if (state.paintings[i].id == action.painting.id) {
+                if (state.paintings[i].id === action.painting.id) {
 
                     const newPaintings = state.paintings.slice();
                     newPaintings[i] = Object.assign({}, newPaintings[i], {
@@ -22,6 +22,7 @@ const paintingGrid = (state={paintings: []}, action) => {
                     });
                 }
             }
+            break;
         }
         default:
             return state;
