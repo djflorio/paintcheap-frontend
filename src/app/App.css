@@ -31,3 +31,9 @@ body {
   background-color: black;
   opacity: 0.3;
 }
+
+@media (max-width: 600px) {
+  .App {
+    padding: 40px 20px;
+  }
+}
