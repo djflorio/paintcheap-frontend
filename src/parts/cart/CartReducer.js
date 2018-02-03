@@ -1,6 +1,13 @@
-import { ADD_TO_OR_REMOVE_FROM_CART } from './CartActions';
+import {
+  ADD_TO_OR_REMOVE_FROM_CART, TOGGLE_CART
+} from './CartActions';
 
-const cart = (state={cart: []}, action) => {
+const defaultState = {
+  cart: [],
+  cartOpen: false
+}
+
+const cart = (state=defaultState, action) => {
   switch(action.type) {
     case ADD_TO_OR_REMOVE_FROM_CART: {
 
@@ -24,6 +31,11 @@ const cart = (state={cart: []}, action) => {
 
       return Object.assign({}, state, {
         cart: newCart
+      });
+    }
+    case TOGGLE_CART: {
+      return Object.assign({}, state, {
+        cartOpen: !state.cartOpen
       });
     }
     default: {

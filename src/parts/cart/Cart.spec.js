@@ -16,6 +16,26 @@ describe('Cart', () => {
     expect(actions.addToOrRemoveFromCart(painting)).toEqual(expectedAction);
   });
 
+  it('should create an action to open/close cart', () => {
+    expect(actions.toggleCart()).toEqual({
+      type: actions.TOGGLE_CART
+    });
+  });
+
+  it('should set cartOpen to true if false with toggleCart', () => {
+    expect(reducer(undefined, actions.toggleCart())).toEqual({
+      cart: [],
+      cartOpen: true
+    });
+  });
+
+  it('should set cartOpen to false if true with toggleCart', () => {
+    expect(reducer({cart: [], cartOpen: true}, actions.toggleCart())).toEqual({
+      cart: [],
+      cartOpen: false
+    });
+  });
+
   it('should add item to empty cart with addToOrRemoveFromCart', () => {
     const painting = {
       id: 1,
@@ -23,9 +43,8 @@ describe('Cart', () => {
       price: 50
     }
     const result = {
-      cart: [
-        painting
-      ]
+      cart: [painting],
+      cartOpen: false
     }
     expect(reducer(undefined, actions.addToOrRemoveFromCart(painting))).toEqual(result);
   });
@@ -45,9 +64,13 @@ describe('Cart', () => {
       cart: [
         painting1,
         painting2
-      ]
+      ],
+      cartOpen: false
     }
-    expect(reducer({cart: [painting1]}, actions.addToOrRemoveFromCart(painting2))).toEqual(result);
+    expect(reducer(
+      {cart: [painting1], cartOpen: false},
+      actions.addToOrRemoveFromCart(painting2))
+    ).toEqual(result);
   });
 
   it('should remove item from cart if already there with addToOrRemoveFromCart', () => {
@@ -57,18 +80,20 @@ describe('Cart', () => {
       price: 50
     }
     const result = {
-      cart: []
+      cart: [],
+      cartOpen: false
     }
     expect(
       reducer(
-        {cart: [painting]},
+        {cart: [painting], cartOpen: false},
         actions.addToOrRemoveFromCart(painting))
       ).toEqual(result);
   });
 
   it('should return default state for unrecognized action', () => {
     expect(reducer(undefined, { type: 'unexpected' })).toEqual({
-      cart: []
+      cart: [],
+      cartOpen: false
     })
   });
 
