@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import TopBarContainer from '../parts/top-bar/TopBarContainer';
 import Home from '../pages/Home';
 import Paintings from '../pages/Paintings';
+import CartContainer from '../parts/cart/CartContainer';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
+          <CartContainer />
           <div className="App__overlay"></div>
           <TopBarContainer />
           <Switch>
