@@ -30,7 +30,7 @@ const Cart = ({cart, cartOpen, totalPrice, onCartCloseClick, onDeleteClick}) => 
                     className="cart__delete" icon={faTrash} />
                   {item.name}
                 </td>
-                <td>${numbro(item.price).format('0,0')}</td>
+                <td className="cart__money-col">${numbro(item.price).format('0,0')}</td>
               </tr>
               )
             })

@@ -17,11 +17,10 @@
 }
 
 .cart__window {
-  position: absolute;
+  position: relative;
+  margin: 80px auto 0 auto;
   background-color: rgba(255,255,255,0.8);
-  top: 80px;
-  left: 80px;
-  right: 80px;
+  max-width: 700px;
   padding: 20px;
 }
 
@@ -39,6 +38,10 @@
 .cart__table {
   width: 100%;
   border-collapse: collapse;
+}
+
+.cart__money-col {
+  width: 100px;
 }
 
 .cart__total-section {
