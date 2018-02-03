@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { showBackground, hideBackground } from './TopBarActions';
+import { toggleCart } from '../cart/CartActions';
 import { connect } from 'react-redux';
 import TopBar from './TopBar';
 
@@ -17,9 +18,9 @@ class TopBarContainer extends Component {
   handleScroll(event) {
     const visible = this.props.backgroundVisible;
     if (document.querySelector(".App").scrollTop > 7 && !visible) {
-      this.props.dispatch(showBackground());
+      this.props.showBackground();
     } else if (document.querySelector(".App").scrollTop <= 7 && visible){
-      this.props.dispatch(hideBackground());
+      this.props.hideBackground();
     }
   }
   render() {
@@ -27,6 +28,7 @@ class TopBarContainer extends Component {
       <TopBar
         backgroundVisible={this.props.backgroundVisible}
         cartTotal={this.props.cartTotal}
+        onCartClick={this.props.onCartClick}
       />
     );
   }
@@ -39,17 +41,21 @@ function mapStateToProps(store) {
   }
 }
 
-/*function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
     showBackground: () => {
       dispatch(showBackground())
     },
     hideBackground: () => {
       dispatch(hideBackground())
+    },
+    onCartClick: () => {
+      dispatch(toggleCart())
     }
   }
-}*/
+}
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(TopBarContainer);

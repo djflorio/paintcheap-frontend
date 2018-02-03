@@ -5,11 +5,11 @@ import { faShoppingCart } from '@fortawesome/fontawesome-free-solid';
 import { NavLink } from 'react-router-dom';
 import './TopBar.css';
 
-const TopBar = ({backgroundVisible, cartTotal}) => {
+const TopBar = ({backgroundVisible, cartTotal, onCartClick}) => {
   return (
     <div className={"top-bar" + (backgroundVisible ? ' top-bar--opaque' : '')}>
       <NavLink className="top-bar__home" to='/'>PaintCheap</NavLink>
-      <a className="top-bar__cart">
+      <a className="top-bar__cart" onClick={() => onCartClick()}>
         <FontAwesomeIcon className="top-bar__cart-icon" icon={faShoppingCart} />
         CART ({cartTotal})
       </a>
@@ -19,7 +19,8 @@ const TopBar = ({backgroundVisible, cartTotal}) => {
 
 TopBar.propTypes = {
   backgroundVisible: PropTypes.bool,
-  cartTotal: PropTypes.number
+  cartTotal: PropTypes.number,
+  onCartClick: PropTypes.func
 }
 
 export default TopBar;
