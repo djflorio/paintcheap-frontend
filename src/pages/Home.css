@@ -47,3 +47,15 @@
   background-color: white;
   color: #9b3434;
 }
+
+@media (max-width: 700px) {
+  .home {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home__title {
+    font-size: 60px;
+  }
+}
