@@ -5,14 +5,17 @@ import Cart from './Cart';
 class CartContainer extends Component {
   render() {
     return (
-      <Cart cart={this.props.cart} />
+      <Cart
+        cart={this.props.cart}
+        cartOpen={this.props.cartOpen} />
     );
   }
 }
 
 function mapStateToProps(store) {
   return {
-    cart: store.cart.cart
+    cart: store.cart.cart,
+    cartOpen: store.cart.cartOpen
   }
 }
 
