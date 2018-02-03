@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/fontawesome-free-solid';
+import { faTimes, faCreditCard } from '@fortawesome/fontawesome-free-solid';
 import numbro from 'numbro';
 import './Cart.css';
 
-const Cart = ({cart, cartOpen, onCartCloseClick}) => {
+const Cart = ({cart, cartOpen, totalPrice, onCartCloseClick}) => {
   const style = {
     display: (cartOpen) ? 'block' : 'none'
   }
@@ -16,7 +16,7 @@ const Cart = ({cart, cartOpen, onCartCloseClick}) => {
         <a className="cart__close" onClick={() => onCartCloseClick()}>
           <FontAwesomeIcon icon={faTimes} />
         </a>
-        <h3 className="cart__title">Your Cart of Art</h3>
+        <h3 className="cart__title">Your Art Cart</h3>
         <hr className="cart__title-line"/>
         <table className="cart__table">
           <tbody>
@@ -30,8 +30,16 @@ const Cart = ({cart, cartOpen, onCartCloseClick}) => {
               )
             })
           }
+            <tr className="cart__total-section">
+              <td>Total</td>
+              <td>${numbro(totalPrice).format('0,0')}</td>
+            </tr>
           </tbody>
         </table>
+        <a className="cart__checkout">
+          <FontAwesomeIcon className="cart__checkout-icon" icon={faCreditCard} />
+          Checkout
+        </a>
       </div>
     </div>
   );
@@ -49,6 +57,7 @@ Cart.propTypes = {
     })
   ),
   cartOpen: PropTypes.bool,
+  totalPrice: PropTypes.number,
   onCartCloseClick: PropTypes.func
 }
 

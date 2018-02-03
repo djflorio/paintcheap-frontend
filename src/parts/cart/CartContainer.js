@@ -9,15 +9,21 @@ class CartContainer extends Component {
       <Cart
         cart={this.props.cart}
         cartOpen={this.props.cartOpen}
+        totalPrice={this.props.totalPrice}
         onCartCloseClick={this.props.onCartCloseClick} />
     );
   }
 }
 
 function mapStateToProps(store) {
+  let totalPrice = 0;
+  for (let i=0; i < store.cart.cart.length; i++) {
+    totalPrice += store.cart.cart[i].price;
+  }
   return {
     cart: store.cart.cart,
-    cartOpen: store.cart.cartOpen
+    cartOpen: store.cart.cartOpen,
+    totalPrice: totalPrice
   }
 }
 

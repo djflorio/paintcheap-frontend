@@ -38,4 +38,28 @@
 
 .cart__table {
   width: 100%;
+  border-collapse: collapse;
+}
+
+.cart__total-section {
+  border-top: solid black 1px;
+}
+
+.cart__checkout {
+  border: solid 2px #489648;
+  color: #489648;
+  border-radius: 25px;
+  padding: 5px 15px;
+  margin-top: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.cart__checkout:hover {
+  background-color: #489648;
+  color: white;
+}
+
+.cart__checkout-icon {
+  margin-right: 5px;
 }
