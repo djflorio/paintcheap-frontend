@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/fontawesome-free-solid';
+import { faShoppingCart, faTimes } from '@fortawesome/fontawesome-free-solid';
 import numbro from 'numbro';
 import './PaintingGrid.css';
 
@@ -23,8 +23,8 @@ const PaintingGrid = ({paintings, onAddClick}) => {
             <span className="painting__retail">${numbro(painting.retail_price).format('0,0')}</span><br/>
             <span className="painting__price">${numbro(painting.price).format('0,0')}</span>
             <a className="painting__add" onClick={() => onAddClick(painting)}>
-              <FontAwesomeIcon className="painting__add-icon" icon={faShoppingCart} />
-              Add to cart
+              <FontAwesomeIcon className="painting__add-icon" icon={ painting.inCart ? faTimes : faShoppingCart } />
+              { painting.inCart ? "Remove" : "Add to cart" }
             </a>
           </div>
         </li>
