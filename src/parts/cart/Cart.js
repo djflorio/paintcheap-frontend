@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/fontawesome-free-solid';
+import numbro from 'numbro';
 import './Cart.css';
 
 const Cart = ({cart, cartOpen, onCartCloseClick}) => {
@@ -17,15 +18,20 @@ const Cart = ({cart, cartOpen, onCartCloseClick}) => {
         </a>
         <h3 className="cart__title">Your Cart of Art</h3>
         <hr className="cart__title-line"/>
-        <ul className="cart__list">
-        {
-          cart.map((item) => {
-            return (
-             <li key={item.id}>{item.name}</li>
-            )
-          })
-        }
-        </ul>
+        <table className="cart__table">
+          <tbody>
+          {
+            cart.map((item) => {
+              return (
+              <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>${numbro(item.price).format('0,0')}</td>
+              </tr>
+              )
+            })
+          }
+          </tbody>
+        </table>
       </div>
     </div>
   );

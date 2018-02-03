@@ -4,7 +4,7 @@ import {
 
 const defaultState = {
   cart: [],
-  cartOpen: true
+  cartOpen: false
 }
 
 const cart = (state=defaultState, action) => {
