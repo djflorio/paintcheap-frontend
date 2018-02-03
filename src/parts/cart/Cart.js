@@ -11,7 +11,7 @@ const Cart = ({cart, cartOpen, totalPrice, onCartCloseClick, onDeleteClick}) => 
   }
   return (
     <div className="cart" style={style}>
-      <div className="cart__overlay"></div>
+      <div className="cart__overlay" onClick={() => onCartCloseClick()}></div>
       <div className="cart__window">
         <a className="cart__close" onClick={() => onCartCloseClick()}>
           <FontAwesomeIcon icon={faTimes} />
