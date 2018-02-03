@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { toggleCart } from './CartActions';
 import Cart from './Cart';
 
 class CartContainer extends Component {
@@ -7,7 +8,8 @@ class CartContainer extends Component {
     return (
       <Cart
         cart={this.props.cart}
-        cartOpen={this.props.cartOpen} />
+        cartOpen={this.props.cartOpen}
+        onCartCloseClick={this.props.onCartCloseClick} />
     );
   }
 }
@@ -19,4 +21,15 @@ function mapStateToProps(store) {
   }
 }
 
-export default connect(mapStateToProps)(CartContainer);
+function mapDispatchToProps(dispatch) {
+  return {
+    onCartCloseClick: () => {
+      dispatch(toggleCart())
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CartContainer);

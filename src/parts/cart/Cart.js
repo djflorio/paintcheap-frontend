@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/fontawesome-free-solid';
 import './Cart.css';
 
-const Cart = ({cart, cartOpen}) => {
+const Cart = ({cart, cartOpen, onCartCloseClick}) => {
   const style = {
     display: (cartOpen) ? 'block' : 'none'
   }
@@ -10,6 +12,9 @@ const Cart = ({cart, cartOpen}) => {
     <div className="cart" style={style}>
       <div className="cart__overlay"></div>
       <div className="cart__window">
+        <a className="cart__close" onClick={() => onCartCloseClick()}>
+          <FontAwesomeIcon icon={faTimes} />
+        </a>
         <h3 className="cart__title">Your Cart of Art</h3>
         <hr className="cart__title-line"/>
         <ul className="cart__list">
@@ -37,7 +42,8 @@ Cart.propTypes = {
       image: PropTypes.string.isRequired
     })
   ),
-  cartOpen: PropTypes.bool
+  cartOpen: PropTypes.bool,
+  onCartCloseClick: PropTypes.func
 }
 
 export default Cart;
