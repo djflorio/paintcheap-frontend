@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://djflorio.github.io/paintcheap-frontend",
+  "homepage": "http://djflorio.github.io/paintcheap-frontend",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.3",
     "@fortawesome/fontawesome-free-solid": "^5.0.6",
@@ -23,6 +23,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
