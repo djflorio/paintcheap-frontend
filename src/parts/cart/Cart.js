@@ -35,9 +35,9 @@ const Cart = ({cart, cartOpen, totalPrice, onCartCloseClick, onDeleteClick}) => 
               )
             })
           }
-            <tr className="cart__total-section">
-              <td>Total</td>
-              <td>${numbro(totalPrice).format('0,0')}</td>
+            <tr>
+              <td className="cart__total-text">Total</td>
+              <td className="cart__total-price">${numbro(totalPrice).format('0,0')}</td>
             </tr>
           </tbody>
         </table>

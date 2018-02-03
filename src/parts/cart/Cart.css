@@ -45,7 +45,17 @@
 }
 
 .cart__total-section {
-  border-top: solid black 1px;
+  padding-top: 20px;
+}
+
+.cart__total-text {
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.cart__total-price {
+  padding-top: 20px;
 }
 
 .cart__checkout {
