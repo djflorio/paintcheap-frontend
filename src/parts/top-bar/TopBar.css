@@ -40,6 +40,15 @@
   right: 40px;
   top: 10px;
   font-family: 'Noto Sans', sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.top-bar__cart:hover {
+  color: #e27878;
 }
 
 .top-bar__cart-icon {
