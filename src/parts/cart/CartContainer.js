@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { toggleCart } from './CartActions';
+import { toggleCart, addToOrRemoveFromCart } from './CartActions';
 import Cart from './Cart';
 
 class CartContainer extends Component {
@@ -10,7 +10,8 @@ class CartContainer extends Component {
         cart={this.props.cart}
         cartOpen={this.props.cartOpen}
         totalPrice={this.props.totalPrice}
-        onCartCloseClick={this.props.onCartCloseClick} />
+        onCartCloseClick={this.props.onCartCloseClick}
+        onDeleteClick={this.props.onDeleteClick} />
     );
   }
 }
@@ -31,6 +32,11 @@ function mapDispatchToProps(dispatch) {
   return {
     onCartCloseClick: () => {
       dispatch(toggleCart())
+    },
+    onDeleteClick: (painting) => {
+      if (window.confirm("Are you sure?")) {
+        dispatch(addToOrRemoveFromCart(painting))
+      }
     }
   }
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faTimes, faCreditCard } from '@fortawesome/fontawesome-free-solid';
+import { faTimes, faCreditCard, faTrash } from '@fortawesome/fontawesome-free-solid';
 import numbro from 'numbro';
 import './Cart.css';
 
-const Cart = ({cart, cartOpen, totalPrice, onCartCloseClick}) => {
+const Cart = ({cart, cartOpen, totalPrice, onCartCloseClick, onDeleteClick}) => {
   const style = {
     display: (cartOpen) ? 'block' : 'none'
   }
@@ -24,7 +24,12 @@ const Cart = ({cart, cartOpen, totalPrice, onCartCloseClick}) => {
             cart.map((item) => {
               return (
               <tr key={item.id}>
-                <td>{item.name}</td>
+                <td>
+                  <FontAwesomeIcon
+                    onClick={() => onDeleteClick(item)}
+                    className="cart__delete" icon={faTrash} />
+                  {item.name}
+                </td>
                 <td>${numbro(item.price).format('0,0')}</td>
               </tr>
               )
@@ -58,7 +63,8 @@ Cart.propTypes = {
   ),
   cartOpen: PropTypes.bool,
   totalPrice: PropTypes.number,
-  onCartCloseClick: PropTypes.func
+  onCartCloseClick: PropTypes.func,
+  onDeleteClick: PropTypes.func
 }
 
 export default Cart;

@@ -63,3 +63,12 @@
 .cart__checkout-icon {
   margin-right: 5px;
 }
+
+.cart__delete {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.cart__delete:hover {
+  color: #e27878;
+}
