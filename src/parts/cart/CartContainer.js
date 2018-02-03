@@ -34,9 +34,7 @@ function mapDispatchToProps(dispatch) {
       dispatch(toggleCart())
     },
     onDeleteClick: (painting) => {
-      if (window.confirm("Are you sure?")) {
-        dispatch(addToOrRemoveFromCart(painting))
-      }
+      dispatch(addToOrRemoveFromCart(painting))
     }
   }
 }
