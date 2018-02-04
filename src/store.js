@@ -10,6 +10,7 @@ import reducer from "./app/reducers";
 // of all redux operations. Promise allows us to use promises, thunk
 // allows us to perform multiple dispatches asynchronously, and logger
 // simply logs helpful information to the console.
-const middleware = applyMiddleware(promise(), thunk, createLogger());
+// const middleware = applyMiddleware(promise(), thunk, createLogger());
+const middleware = applyMiddleware(promise(), thunk);
 
 export default createStore(reducer, middleware);
